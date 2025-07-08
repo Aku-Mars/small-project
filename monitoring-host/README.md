@@ -1,6 +1,7 @@
 # 🖥️ Dashboard Monitoring Host Real-time
 
 ![Monitoring Host Screenshot](image.png)
+![Discord Notification](image-1.png)
 
 ## Deskripsi Aplikasi
 
