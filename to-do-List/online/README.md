@@ -17,7 +17,7 @@ CREATE TABLE tasks (
      due_date DATE,
      description TEXT,
      is_completed BOOLEAN DEFAULT FALSE
-); "
+);
 ```
 
 **> Membuat User**
@@ -34,9 +34,7 @@ kemudian ubah username dan password yang ada**
 6. ```git clone https://github.com/Aku-Mars/To-doList.git```
 7. lanjut
 ```
-pip install Flask
-pip install Flask-SQLAlchemy
-pip install Flask-Babel
+pip install Flask Flask-SQLAlchemy PyMySQL pytz
 ```
 **> kalau tidak bisa install node.js dlu**
 

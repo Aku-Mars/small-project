@@ -116,7 +116,7 @@
     <div class="card" id="taskCard">
         <div class="card__content">
             <h1>Edit Task</h1>
-            <form method="POST" action="/edit_task/{{ task.id }}">
+            <form method="POST" action="{{ url_for('edit_task', id=task.id) }}">
                 <label for="title">Tugas:</label>
                 <input type="text" id="title" name="title" value="{{ task.title }}" required><br>
                 <label for="due_date">Tenggat Waktu:</label>

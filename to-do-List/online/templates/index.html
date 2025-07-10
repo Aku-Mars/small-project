@@ -254,15 +254,15 @@
                 <p>Tenggat Waktu: {{ dayNames[task.due_date.strftime("%A")] }}, {{ task.due_date.strftime("%d %B %Y") }}</p>
                 <p>{{ task.description }}</p>
                 <span class="button-container">
-                    <a class="edit-button" href="/edit_task/{{ task.id }}">Edit</a>
-                    <a class="delete-button" href="/delete_task/{{ task.id }}">Selesai</a>
+                    <a class="edit-button" href="{{ url_for('edit_task', id=task.id) }}">Edit</a>
+                    <a class="delete-button" href="{{ url_for('delete_task', id=task.id) }}">Selesai</a>
                 </span>
             </li>
         {% endfor %}
     </ul>
 
     <h2>Tambahkan Tugas Baru</h2>
-    <form method="POST" action="/add_task">
+    <form method="POST" action="{{ url_for('add_task') }}">
         <label for="title">Tugas:</label>
         <input type="text" id="title" name="title" required>
         <label for="due_date">Tenggat Waktu:</label>

@@ -140,7 +140,7 @@
                 <p>Tenggat Waktu: {{ dayNames[deleted_task.due_date.strftime("%A")] }}, {{ deleted_task.due_date.strftime("%d %B %Y") }}</p>
                 <p>Deskripsi: {{ deleted_task.description }}</p>
                 <p>Waktu Selesai: {{ deleted_task.deleted_at.astimezone(pytz.timezone('Asia/Jakarta')).strftime("%d %B %Y %H:%M:%S") }}</p>
-                <a class="restore-button" href="/restore_task/{{ deleted_task.id }}">Kembalikan</a>
+                <a class="restore-button" href="{{ url_for('restore_task', id=deleted_task.id) }}">Kembalikan</a>
             </li>
         {% endfor %}
     </ul>
